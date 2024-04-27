@@ -58,7 +58,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
      * 刷新模块状态
      */
     private fun refreshModuleStatus() {
-        binding.mainLinStatus.setBackgroundResource(
+        /*binding.mainLinStatus.setBackgroundResource(
             when {
                 YukiHookAPI.Status.isXposedModuleActive -> R.drawable.bg_green_round
                 else -> R.drawable.bg_dark_round
@@ -69,7 +69,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 YukiHookAPI.Status.isXposedModuleActive -> R.mipmap.ic_success
                 else -> R.mipmap.ic_warn
             }
-        )
+        )*/
         binding.mainTextStatus.text = getString(
             when {
                 YukiHookAPI.Status.isXposedModuleActive -> R.string.module_is_activated

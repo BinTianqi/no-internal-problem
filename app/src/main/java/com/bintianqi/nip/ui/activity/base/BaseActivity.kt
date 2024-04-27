@@ -1,4 +1,4 @@
-@file:Suppress("MemberVisibilityCanBePrivate", "UNCHECKED_CAST")
+@file:Suppress("MemberVisibilityCanBePrivate")
 
 package com.bintianqi.nip.ui.activity.base
 
@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowCompat
 import androidx.viewbinding.ViewBinding
+import com.bintianqi.nip.R
+import com.bintianqi.nip.utils.factory.isNotSystemInDarkMode
 import com.highcapable.yukihookapi.hook.factory.current
 import com.highcapable.yukihookapi.hook.factory.method
 import com.highcapable.yukihookapi.hook.type.android.LayoutInflaterClass
-import com.bintianqi.nip.R
-import com.bintianqi.nip.utils.factory.isNotSystemInDarkMode
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
