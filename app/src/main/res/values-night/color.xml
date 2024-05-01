@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorThemeBackground">#202020</color>
+    <color name="baseTexture">#FFFFFF</color>
+    <color name="reversedBaseTexture">#000000</color>
+    <color name="activationStatusBoxInactive">#494949</color>
+    <color name="activationStatusBoxActive">#A4C9FE</color>
+    <color name="outlineStroke">#636363</color>
+</resources>

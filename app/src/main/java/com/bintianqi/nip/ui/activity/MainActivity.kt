@@ -53,23 +53,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         ) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 
     /**
+     * Get current night mode settings
+     *
+     * 获取当前夜间模式设置状态
+     * @return [Boolean]
+     */
+
+    /**
      * Refresh module status
      *
      * 刷新模块状态
      */
     private fun refreshModuleStatus() {
-        /*binding.mainLinStatus.setBackgroundResource(
-            when {
-                YukiHookAPI.Status.isXposedModuleActive -> R.drawable.bg_green_round
-                else -> R.drawable.bg_dark_round
-            }
-        )
-        binding.mainImgStatus.setImageResource(
-            when {
-                YukiHookAPI.Status.isXposedModuleActive -> R.mipmap.ic_success
-                else -> R.mipmap.ic_warn
-            }
-        )*/
+        if (YukiHookAPI.Status.isXposedModuleActive) {
+            binding.mainLinStatus.setBackgroundResource(R.drawable.ui_card_activated)
+            binding.mainIconStatus.setImageResource(R.drawable.ic_check_circle)
+            binding.mainIconStatus.setColorFilter(getColor(R.color.reversedBaseTexture))
+            binding.mainTextStatus.setTextColor(getColor(R.color.reversedBaseTexture))
+            binding.mainTextVersion.alpha = 0.6F
+            binding.mainTextVersion.setTextColor(getColor(R.color.reversedBaseTexture))
+            binding.mainTextApiWay.alpha = 0.5F
+            binding.mainTextApiWay.setTextColor(getColor(R.color.reversedBaseTexture))
+        }
         binding.mainTextStatus.text = getString(
             when {
                 YukiHookAPI.Status.isXposedModuleActive -> R.string.module_is_activated
@@ -78,7 +83,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         )
         binding.mainTextApiWay.isVisible = YukiHookAPI.Status.isXposedModuleActive
         binding.mainTextApiWay.text = if (YukiHookAPI.Status.Executor.apiLevel > 0)
-            "Activated by ${YukiHookAPI.Status.Executor.name} API ${YukiHookAPI.Status.Executor.apiLevel}"
-        else "Activated by ${YukiHookAPI.Status.Executor.name}"
+            "${getString(R.string.activateApiWayTextBefore)} ${YukiHookAPI.Status.Executor.name} API ${YukiHookAPI.Status.Executor.apiLevel} ${getString(R.string.activateApiWayTextAfter)}"
+        else "${getString(R.string.activateApiWayTextBefore)} ${YukiHookAPI.Status.Executor.name} ${getString(R.string.activateApiWayTextAfter)}"
     }
 }

@@ -5,4 +5,10 @@
     <string name="module_not_activated">模块未激活</string>
     <string name="module_is_activated">模块已激活</string>
     <string name="hide_icon">隐藏桌面图标</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_status">状态</string>
+    <string name="activateApiWayTextBefore">已通过</string>
+    <string name="activateApiWayTextAfter">激活</string>
+    <string name="hide_icon_desc">隐藏后, 应用将会重启且不会再在桌面显示图标。你仍然可以通过 LSPosed > 模块 > No Internal Problem > 模块设置 (位于右下角) 来回到此页面。</string>
+    <string name="hide_icon_warn">启用此功能前, 请先禁用 LSPosed 的 \"强制应用显示桌面图标\" 功能。</string>
 </resources>
