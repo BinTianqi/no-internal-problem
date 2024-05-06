@@ -6,4 +6,6 @@
     <string name="module_is_activated">Module is activated</string>
     <string name="welcome_text" translatable="false">Welcome to Android 14. </string>
     <string name="hide_icon">Hide launcher icon</string>
+    <string name="custom_text">Custom text</string>
+    <string name="set_text">Set text</string>
 </resources>

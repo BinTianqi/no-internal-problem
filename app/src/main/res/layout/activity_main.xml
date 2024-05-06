@@ -2,93 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity"
     tools:ignore="UselessParent,UseCompoundDrawables,ContentDescription">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="0dp"
-        android:gravity="center|start"
-        android:paddingLeft="15dp"
-        android:paddingTop="13dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="5dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:singleLine="true"
-            android:text="@string/app_name"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/main_lin_status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/bg_dark_round"
-        android:gravity="center">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp">
-
-            <TextView
-                android:id="@+id/main_text_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="@string/module_not_activated"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/main_text_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.8"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="@string/module_version"
-                android:textColor="@android:color/black"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/main_text_api_way"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:alpha="0.6"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:textSize="11sp"
-                android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
+        android:paddingTop="50dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/hide_icon_in_launcher_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="20dp"
-        android:textColor="@android:color/black"
+        android:paddingTop="10dp"
         android:text="@string/hide_icon" />
 
 </LinearLayout>

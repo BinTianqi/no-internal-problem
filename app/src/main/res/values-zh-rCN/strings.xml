@@ -5,4 +5,6 @@
     <string name="module_not_activated">模块未激活</string>
     <string name="module_is_activated">模块已激活</string>
     <string name="hide_icon">隐藏桌面图标</string>
+    <string name="custom_text">自定义文本</string>
+    <string name="set_text">设置文本</string>
 </resources>

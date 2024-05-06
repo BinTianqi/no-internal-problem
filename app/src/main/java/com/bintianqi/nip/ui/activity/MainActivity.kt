@@ -4,35 +4,16 @@ package com.bintianqi.nip.ui.activity
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
-import androidx.core.view.isVisible
-import com.highcapable.yukihookapi.YukiHookAPI
-import com.bintianqi.nip.R
 import com.bintianqi.nip.databinding.ActivityMainBinding
 import com.bintianqi.nip.ui.activity.base.BaseActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-
     override fun onCreate() {
-        refreshModuleStatus()
-        binding.mainTextVersion.text = getString(R.string.module_version, "v1.0")
         binding.hideIconInLauncherSwitch.isChecked = isLauncherIconShowing.not()
         binding.hideIconInLauncherSwitch.setOnCheckedChangeListener { button, isChecked ->
             if (button.isPressed) hideOrShowLauncherIcon(isChecked)
         }
-        // Your code here.
     }
-
-    /**
-     * Hide or show launcher icons
-     *
-     * - You may need the latest version of LSPosed to enable the function of hiding launcher
-     *   icons in higher version systems
-     *
-     * 隐藏或显示启动器图标
-     *
-     * - 你可能需要 LSPosed 的最新版本以开启高版本系统中隐藏 APP 桌面图标功能
-     * @param isShow Whether to display / 是否显示
-     */
     private fun hideOrShowLauncherIcon(isShow: Boolean) {
         packageManager?.setComponentEnabledSetting(
             ComponentName(packageName, "${packageName}.Home"),
@@ -40,45 +21,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             PackageManager.DONT_KILL_APP
         )
     }
-
-    /**
-     * Get launcher icon state
-     *
-     * 获取启动器图标状态
-     * @return [Boolean] Whether to display / 是否显示
-     */
     private val isLauncherIconShowing
         get() = packageManager?.getComponentEnabledSetting(
             ComponentName(packageName, "${packageName}.Home")
         ) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 
-    /**
-     * Refresh module status
-     *
-     * 刷新模块状态
-     */
-    private fun refreshModuleStatus() {
-        /*binding.mainLinStatus.setBackgroundResource(
-            when {
-                YukiHookAPI.Status.isXposedModuleActive -> R.drawable.bg_green_round
-                else -> R.drawable.bg_dark_round
-            }
-        )
-        binding.mainImgStatus.setImageResource(
-            when {
-                YukiHookAPI.Status.isXposedModuleActive -> R.mipmap.ic_success
-                else -> R.mipmap.ic_warn
-            }
-        )*/
-        binding.mainTextStatus.text = getString(
-            when {
-                YukiHookAPI.Status.isXposedModuleActive -> R.string.module_is_activated
-                else -> R.string.module_not_activated
-            }
-        )
-        binding.mainTextApiWay.isVisible = YukiHookAPI.Status.isXposedModuleActive
-        binding.mainTextApiWay.text = if (YukiHookAPI.Status.Executor.apiLevel > 0)
-            "Activated by ${YukiHookAPI.Status.Executor.name} API ${YukiHookAPI.Status.Executor.apiLevel}"
-        else "Activated by ${YukiHookAPI.Status.Executor.name}"
-    }
 }
