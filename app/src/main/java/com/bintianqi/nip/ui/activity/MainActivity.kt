@@ -25,5 +25,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         get() = packageManager?.getComponentEnabledSetting(
             ComponentName(packageName, "${packageName}.Home")
         ) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-
 }
