@@ -1,0 +1,23 @@
+[versions]
+agp = "8.4.0"
+kotlin-android = "1.9.23"
+ksp = "1.9.23-1.0.20"
+
+xposed-api = "82"
+yukihook-api = "1.2.0"
+androidx-core-ktx = "1.13.0"
+androidx-appcompat = "1.6.1"
+material = "1.11.0"
+
+[libraries]
+xposed-api = { module = "de.robv.android.xposed:api", name = "api", version.ref = "xposed-api" }
+yukihook-api = { module = "com.highcapable.yukihookapi:api", name = "api", version.ref = "yukihook-api" }
+yukihook-ksp-xposed = { module = "com.highcapable.yukihookapi:ksp-xposed", name = "ksp-xposed", version.ref = "yukihook-api" }
+androidx-core = { module = "androidx.core:core-ktx", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+android-material = { module = "com.google.android.material:material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-android" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
