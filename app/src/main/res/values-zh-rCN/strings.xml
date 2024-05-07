@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc">修改开机后出现的 “设备出现内部问题” 对话框</string>
-    <string name="module_version">模块版本：%1$s</string>
-    <string name="module_not_activated">模块未激活</string>
-    <string name="module_is_activated">模块已激活</string>
+    <string name="xposed_desc">关闭开机后出现的 “设备出现内部问题” 警告</string>
     <string name="hide_icon">隐藏桌面图标</string>
-    <string name="custom_text">自定义文本</string>
-    <string name="set_text">设置文本</string>
 </resources>

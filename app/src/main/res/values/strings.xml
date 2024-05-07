@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">No Internal Problem</string>
     <string name="xposed_desc">Disable "Internal problem" dialog after boot</string>
-    <string name="module_version">Module version: %1$s</string>
-    <string name="module_not_activated">Module not activated</string>
-    <string name="module_is_activated">Module is activated</string>
-    <string name="welcome_text" translatable="false">Welcome to Android 14. </string>
     <string name="hide_icon">Hide launcher icon</string>
-    <string name="custom_text">Custom text</string>
-    <string name="set_text">Set text</string>
 </resources>
