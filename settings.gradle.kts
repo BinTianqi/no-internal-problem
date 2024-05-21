@@ -5,12 +5,14 @@ pluginManagement {
         mavenCentral()
     }
 }
-plugins {
-    id("com.highcapable.sweetdependency") version "1.0.4"
-    id("com.highcapable.sweetproperty") version "1.0.5"
-}
-sweetProperty {
-    rootProject { all { isEnable = false } }
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")
+        maven("https://api.xposed.info")
+    }
 }
 rootProject.name = "No Internal Problem"
+
 include(":app")
