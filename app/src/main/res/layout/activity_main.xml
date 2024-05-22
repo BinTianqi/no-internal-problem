@@ -1,27 +1,237 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:background="@color/colorThemeBackground"
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity"
     tools:ignore="UselessParent,UseCompoundDrawables,ContentDescription">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="50dp"
-        android:singleLine="true"
-        android:text="@string/app_name"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/hide_icon_in_launcher_switch"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="10dp"
-        android:text="@string/hide_icon" />
+        android:elevation="0dp"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:paddingTop="13dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/baseTexture"
+            android:textSize="22.5sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginBottom="12.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/base_hr_height"
+            android:layout_weight="2"
+            app:layout_constrainedHeight="true"
+            android:background="@drawable/ui_base_hr" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginEnd="2.5dp"
+                app:srcCompat="@drawable/ic_status"
+                app:tint="@color/baseTexture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2.5dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text="@string/settings_status" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/base_hr_height"
+            android:layout_weight="2"
+            android:background="@drawable/ui_base_hr" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_lin_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ui_card_inactivated"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/main_icon_status"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="5dp"
+            app:srcCompat="@drawable/ic_error"
+            app:tint="@color/baseTexture" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="12.5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/main_text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2.5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/module_not_activated"
+                android:textColor="@color/baseTexture"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/main_text_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/module_version"
+                android:textColor="@color/baseTexture"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/main_text_api_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:alpha="0.3"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12.5dp"
+        android:layout_marginBottom="12.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/base_hr_height"
+            android:layout_weight="2"
+            app:layout_constrainedHeight="true"
+            android:background="@drawable/ui_base_hr" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginEnd="2.5dp"
+                app:srcCompat="@drawable/ic_appearance"
+                app:tint="@color/baseTexture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2.5dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text="@string/settings_appearance" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/base_hr_height"
+            android:layout_weight="2"
+            android:background="@drawable/ui_base_hr" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/settings_container_appearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ui_rounded_content_box"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/hide_icon_in_launcher_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hide_icon"
+                android:textColor="@color/baseTexture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:paddingHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="11sp"
+                android:text="@string/hide_icon_desc"
+                android:textColor="@color/baseTexture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:paddingHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="11sp"
+                android:text="@string/hide_icon_warn"
+                android:textColor="@color/warnTexture" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>

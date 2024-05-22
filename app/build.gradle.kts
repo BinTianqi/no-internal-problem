@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.bintianqi.nip"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionName = "1.0"
         versionCode = 1

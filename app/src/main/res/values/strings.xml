@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name" translatable="false">No Internal Problem</string>
+    <string name="module_version">Module version: %1$s</string>
+    <string name="module_not_activated">Module not activated</string>
+    <string name="module_is_activated">Module is activated</string>
     <string name="xposed_desc">Disable "Internal problem" dialog after boot</string>
     <string name="hide_icon">Hide launcher icon</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_status">Status</string>
+    <string name="activateApiWayTextBefore">Activated by</string>
+    <string name="activateApiWayTextAfter"><!-- None --></string>
+    <string name="hide_icon_desc">After hiding the launcher icon, app will restart and you will no longer find No Internal Problem on the launcher. You can still come back using LSPosed > Modules > NIP > Module Settings.</string>
+    <string name="hide_icon_warn">Before turn on this feature, please disable the \"Force apps to show launcher icons\" feature in LSPosed.</string>
 </resources>
