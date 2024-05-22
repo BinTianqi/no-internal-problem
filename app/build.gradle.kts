@@ -12,8 +12,8 @@ android {
         applicationId = "com.bintianqi.nip"
         minSdk = 23
         targetSdk = 34
-        versionName = "1.0"
-        versionCode = 1
+        versionName = "1.1"
+        versionCode = 2
     }
     buildTypes {
         release {
